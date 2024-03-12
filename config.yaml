@@ -45,6 +45,11 @@ endpoints:
     interval: 1m
     conditions:
       - "[CONNECTED] == true"
+   - name: dummy-url
+    url: "https://aaya.com"
+    interval: 10m
+    conditions:
+      - "[STATUS] == 200"
 
   - name: check-domain-expiration
     url: "https://example.org/"
